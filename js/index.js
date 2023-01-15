@@ -75,3 +75,19 @@
 // } else {
 //   console.log("no month");
 // }
+// ЗАДАЧА 7
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ПРОВІРЯЄ ЛОГІН І ПАРОЛЬ, І ВИВОДИТЬ ПРИВІТАННЯ - ЯКЩО ВСЕ ДОБРЕ,
+// АБО ВИДАЄ ПОМИЛКУ , ЩО НЕ ВІРНИЙ ЛОГІН
+
+// front
+// const login = prompt("введіть ваш логін").toLowerCase();
+
+// const pass = prompt("введіть ваш пароль").toLowerCase();
+
+// //  back
+// const passwordOk = "12345";
+// const loginOk = "Ivan".toLowerCase();
+
+// const result = login === loginOk && pass === passwordOk ? "welcome" : "error";
+
+// console.log(result);
