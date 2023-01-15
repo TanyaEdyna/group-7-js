@@ -17,3 +17,13 @@
 
 // const message = `КОРИСТУВАЧ ${name} ВИКОРИСТОВУЄ  ${mail} ПОЧТУ І ${tel} ТЕЛЕФОН`;
 // console.log(message);
+
+//ЗАДАЧА 3
+//ПОРАХУЙТЕ СУМУ ТОВАРІВ У КОРЗИНІ . ПОТРІБНО ВВЕСТИ СУМУ 3-Х ТОВАРІВ І ПОРАХУВАТИ ЇХ СУМУ
+
+//const tel = Number(prompt("Введить ціну товару 1!"));
+//const comp = +prompt("Введить ціну товару 2!");
+//const tv = +prompt("Введить ціну товару 3!");
+
+//const totalPrise = tel + comp + tv;
+//console.log(totalPrise);
