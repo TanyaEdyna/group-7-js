@@ -34,10 +34,44 @@
 // ЯКЩО НЕ ПРАВИЛЬНО КОРИСТУВАЧ ВВІВ, ТОДІ У КОНСОЛІ ПИШЕ
 // "НЕ ЗНАЄТЕ? 12"
 
-const years = Number(prompt("СКІЛЬКИ МІСЯЦІВ МАЄ РІК?"));
+// const years = Number(prompt("СКІЛЬКИ МІСЯЦІВ МАЄ РІК?"));
 
-if (years === 12) {
-  console.log("Вірно");
-} else {
-  console.log("НЕ ЗНАЄТЕ? 12");
-}
+// if (years === 12) {
+//   console.log("Вірно");
+// } else {
+//   console.log("НЕ ЗНАЄТЕ? 12");
+// }
+
+// ЗАДАЧА 5
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ДОЗВОЛЯТИМЕ ЮЗЕРУ ВВОДИТИ ЧИСЛО І ОПРИДІЛЯТИМЕ ЧИ ЧИСЛО
+// ДІЛИТЬСЯ НА СВОЄ ЧИСЛО, ЧИ МАЄ ОСТАТОК
+
+// const num = Number(prompt("Enter a number"));
+
+// if (num % 2 === 0) {
+//   console.log("Yes");
+// } else {
+//   console.log("No");
+// }
+
+// const res = num % 2 === 0 ? "Yes" : "No";
+
+// console.log(res);
+
+// ЗАДАЧА 6
+// НАПИШІТЬ ПРОГРАМУ, ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ,
+// І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
+
+// const month = Number(prompt("Enter a month"));
+
+// if (month === 12 || month === 1 || month === 2) {
+//   console.log("winter");
+// } else if (month >= 3 && month <= 5) {
+//   console.log("spring");
+// } else if (month >= 6 && month <= 8) {
+//   console.log("summer");
+// } else if (month >= 9 && month <= 11) {
+//   console.log("autumn");
+// } else {
+//   console.log("no month");
+// }
