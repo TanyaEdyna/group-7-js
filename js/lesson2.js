@@ -37,10 +37,10 @@
 //
 
 //function logItems(array) {
-  //for (let i = 0; i < array.length; i += 1) {
-    //console.log(i, array[i]);
- // }
-  //eturn array;
+//for (let i = 0; i < array.length; i += 1) {
+//console.log(i, array[i]);
+// }
+//eturn array;
 //}
 //logItems(["Mango", "Poly", "Ajax"]);
 
@@ -55,7 +55,7 @@
 //   if (minNumber > number) {
 //     minNumber = number;
 //   }
-  
+
 // }
 // console.log(minNumber);
 
@@ -67,7 +67,7 @@
 //   if (minNumber > number) {
 //     minNumber = number;
 //   }
-  
+
 //   }
 //   return minNumber;
 // }
@@ -77,18 +77,43 @@
 // ЗАДАЧА 4
 //  Провірте , чи являється рядок полідромом
 
- const str = "ротатор";//true
- const newString = "Hello";//false
+//  const str = "ротатор";//true
+//  const newString = "Hello";//false
 
-const newArray = str.split("").reverse().join("");
+// const newArray = str.split("").reverse().join("");
 
-console.log(newArray);
+// console.log(newArray);
 
-console.log(str === newArray);
+// console.log(str === newArray);
 
-const dublArray = newString.split("").reverse().join("");
+// const dublArray = newString.split("").reverse().join("");
 
-console.log(dublArray);
+// console.log(dublArray);
 
-console.log(newString === dublArray);
+// console.log(newString === dublArray);
+
+
+// ЗАДАЧА 5
+// Напишіть ф - цію calculateAverage() яка приймає довільну 
+// кількість аргументів і повертає їх середнє значення.
+// Всі аргументи будуть тільки числовими
+// function calculateAverage() {
+//   // console.log(arguments)
+//   const numberArguments = Array.from(arguments);
+//   console.log(numberArguments);
+
+//   let avaregeNumber = 0;
+//   for (let argument of numberArguments) {
+//     avaregeNumber += argument;
+//   }
+//   const totalSum = avaregeNumber / numberArguments.length;
+
+//   console.log(avaregeNumber);
+
+//   return totalSum;
+// }
+
+// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calculateAverage(14, 8, 2)); // 8
+// console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
 
