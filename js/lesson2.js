@@ -33,12 +33,43 @@
 // Напишіть ф-цію logItems(array) , яка буде получати масив і використовуючи цикл for , який для кожного елемента масива буде виводити в консоль
 // повідомлення у форматі <індекс елемента> та <значення елемента>.
 // Номерація для кожного елемента масива ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
-const array = [];
+//const array = [];
+//
 
-function logItems(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(i, array[i]);
-  }
-  return array;
-}
-logItems(["Mango", "Poly", "Ajax"]);
+//function logItems(array) {
+  //for (let i = 0; i < array.length; i += 1) {
+    //console.log(i, array[i]);
+ // }
+  //eturn array;
+//}
+//logItems(["Mango", "Poly", "Ajax"]);
+
+
+// ЗАДАЧА 3
+// Напишіть код , який шукає саме найменше число в масиві
+// 1) напишіть циклом for
+// const numbers = [2, 17, 94, 1, 23, 37];
+// let minNumber = Infinity;
+
+// for (let number of numbers) {
+//   if (minNumber > number) {
+//     minNumber = number;
+//   }
+  
+// }
+// console.log(minNumber);
+
+// 2) перепишіть функцією findSmallestNumber(numbers)
+// function findSmallestNumber(numbers) {
+//   let minNumber = Infinity;
+
+// for (let number of numbers) {
+//   if (minNumber > number) {
+//     minNumber = number;
+//   }
+  
+//   }
+//   return minNumber;
+// }
+//  console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
