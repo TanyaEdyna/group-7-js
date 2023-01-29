@@ -71,5 +71,24 @@
 //   }
 //   return minNumber;
 // }
-//  console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); 
+//  console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
 // console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+// ЗАДАЧА 4
+//  Провірте , чи являється рядок полідромом
+
+ const str = "ротатор";//true
+ const newString = "Hello";//false
+
+const newArray = str.split("").reverse().join("");
+
+console.log(newArray);
+
+console.log(str === newArray);
+
+const dublArray = newString.split("").reverse().join("");
+
+console.log(dublArray);
+
+console.log(newString === dublArray);
+
