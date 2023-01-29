@@ -8,23 +8,37 @@
 
 // МАСИВ ПО ХОДІ ВИПОВНЕННЯ ОПЕРАЦІЇ
 // Джаз, Блюз
-const array = ["Джаз", "Блюз"];
-console.log(array);
+// const array = ["Джаз", "Блюз"];
+// console.log(array);
 
-// Джаз, Блюз, Рок-н-ролл
-array.push("Рок - н - ролл");
-console.log(array);
+// // Джаз, Блюз, Рок-н-ролл
+// array.push("Рок - н - ролл");
+// console.log(array);
 
-// Джаз, Классика, Рок-н-ролл
-array.splice(1, 1, "Классика");
-console.log(array);
+// // Джаз, Классика, Рок-н-ролл
+// array.splice(1, 1, "Классика");
+// console.log(array);
 
-// Классика, Рок-н-ролл
-// array.shift();
-const delElement = array.shift();
-console.log(delElement);
-console.log(array);
+// // Классика, Рок-н-ролл
+// // array.shift();
+// const delElement = array.shift();
+// console.log(delElement);
+// console.log(array);
 
-// Рэп, Регги, Классика, Рок-н-ролл
-array.unshift("Рэп", "Регги");
-console.log(array);
+// // Рэп, Регги, Классика, Рок-н-ролл
+// array.unshift("Рэп", "Регги");
+// console.log(array);
+
+// ЗАДАЧА 2
+// Напишіть ф-цію logItems(array) , яка буде получати масив і використовуючи цикл for , який для кожного елемента масива буде виводити в консоль
+// повідомлення у форматі <індекс елемента> та <значення елемента>.
+// Номерація для кожного елемента масива ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
+const array = [];
+
+function logItems(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    console.log(i, array[i]);
+  }
+  return array;
+}
+logItems(["Mango", "Poly", "Ajax"]);
