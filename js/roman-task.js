@@ -1,3 +1,214 @@
+// 11.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 11 (codewars - 7 kyu) ----------------------------
+// Write an algorithm that takes an array and moves all of the zeros to the end,
+// preserving the order of the other elements.
+
+// ------------------ решение ЗАДАЧА 11 (codewars - 7 kyu) --------------------------------
+// function moveZeros(arr) {
+//   const zeroArr = arr.filter((el) => el === 0);
+//   const noneZeroArr = arr.filter((el) => el !== 0);
+
+//   return [...noneZeroArr, ...zeroArr];
+// }
+
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // returns[false,1,1,2,1,3,"a",0,0]
+
+// 07.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 10 (freecodecamp) ----------------------------
+// We have defined a function named rangeOfNumbers with two parameters.
+// The function should return an array of integers which begins with a number
+// represented by the startNum parameter and ends with a number represented by the endNum parameter.
+// The starting number will always be less than or equal to the ending number.
+// Your function must use recursion by calling itself and not use loops of any kind.
+// It should also work for cases where both startNum and endNum are the same.
+
+// ------------------ решение ЗАДАЧА 10 (freecodecamp) --------------------------------
+// function countdown(n) {
+//   if (0 >= n) {
+//     return [];
+//   } else {
+//     const arr = countdown(n - 1);
+//     arr.push(n);
+//     return arr;
+//   }
+// }
+
+// // const countdown = (n) => (n < 1 ? [] : [n, ...countdown(n - 1)]); //тоже что и выше
+
+// console.log(countdown(5));
+
+// const rangeOfNumbers = (startNum, endNum) =>
+//   startNum > endNum ? [] : [startNum, ...rangeOfNumbers(startNum + 1, endNum)];
+
+// console.log(rangeOfNumbers(1, 5));
+
+// 05.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 9 (codewars - 7 kyu) ----------------------------
+// The rgb function is incomplete.Complete it so that passing in RGB decimal values will result
+// in a hexadecimal representation being returned.Valid decimal values for RGB are 0 - 255.
+// Any values that fall out of that range must be rounded to the closest valid value.
+// Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+// The following are examples of expected output values:
+// rgb(255, 255, 255) // returns FFFFFF
+// rgb(255, 255, 300) // returns FFFFFF
+// rgb(0,0,0) // returns 000000
+// rgb(148, 0, 211) // returns 9400D3
+// rgb(0, 0, -20), // returns 2E0AFF;
+// rgb(46, 10, 268); // returns "2E0AFF";
+
+// ------------------ решение ЗАДАЧА 9 (codewars - 7 kyu) --------------------------------
+// const rgb = (...args) => {
+//   return args.reduce(
+//     (str, el) =>
+//       (str += Math.min(255, Math.max(0, el))
+//         .toString(16)
+//         .padStart(2, "0")
+//         .toUpperCase()),
+//     ""
+//   );
+// };
+
+// console.log(rgb(0, 0, -20));
+// console.log(rgb(46, 10, 268));
+
+// 04.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 8 ----------------------------
+// создать счетчик на странице
+
+// эту html разметку нужно добавить в index.html
+// <div id="counter-1">
+//   <button data-decrement>-</button>
+//   <span data-value>0</span>
+//   <button data-increment>+</button>
+// </div>
+
+// <div id="counter-2">
+//   <button data-decrement>-</button>
+//   <span data-value>0</span>
+//   <button data-increment>+</button>
+// </div>
+
+// синтакчис через класс
+
+// class CounterPlugin {
+//   constructor({ rootSelector, initialValue = 0, step = 1 } = {}) {
+//     this._value = initialValue;
+//     this._step = step;
+//     this._refs = this.getRefs(rootSelector);
+//     this.updateValueUI();
+//     this.bindFvents();
+//   }
+
+//   getRefs(rootSelector) {
+//     const refs = {};
+
+//     refs.container = document.querySelector(rootSelector);
+//     refs.incrementBtn = refs.container.querySelector("[data-increment]");
+//     refs.decrementBtn = refs.container.querySelector("[data-decrement]");
+//     refs.value = refs.container.querySelector("[data-value]");
+
+//     return refs;
+//   }
+
+//   updateValueUI() {
+//     this._refs.value.textContent = this._value;
+//   }
+
+//   increment() {
+//     this._value += this._step;
+//   }
+
+//   decrement() {
+//     this._value -= this._step;
+//   }
+
+//   bindFvents() {
+//     this._refs.incrementBtn.addEventListener("click", () => {
+//       this.increment();
+//       this.updateValueUI();
+//     });
+
+//     this._refs.decrementBtn.addEventListener("click", () => {
+//       this.decrement();
+//       this.updateValueUI();
+//     });
+//   }
+// }
+
+// const counter1 = new CounterPlugin({
+//   rootSelector: "#counter-1",
+//   initialValue: 2,
+//   step: 2,
+// });
+// console.log("counter1", counter1);
+
+// const counter2 = new CounterPlugin({
+//   rootSelector: "#counter-2",
+//   initialValue: 10,
+//   step: 5,
+// });
+// console.log("counter2", counter2);
+
+// синтакчис через функцию
+
+// const CounterPlugin = function ({
+//   rootSelector,
+//   initialValue = 0,
+//   step = 1,
+// } = {}) {
+//   this._value = initialValue;
+//   this._step = step;
+
+//   this._refs = this._getRefs(rootSelector);
+//   this.updateValueUI();
+//   this._bindFvents();
+// };
+
+// CounterPlugin.prototype._getRefs = function (rootSelector) {
+//   const refs = {};
+//   refs.container = document.querySelector(rootSelector);
+
+//   refs.incrementBtn = refs.container.querySelector("[data-increment]");
+//   refs.decrementBtn = refs.container.querySelector("[data-decrement]");
+//   refs.value = refs.container.querySelector("[data-value]");
+
+//   return refs;
+// };
+
+// CounterPlugin.prototype._bindFvents = function () {
+//   this._refs.incrementBtn.addEventListener("click", () => {
+//     this.increment();
+//     this.updateValueUI();
+//   });
+
+//   this._refs.decrementBtn.addEventListener("click", () => {
+//     this.decrement();
+//     this.updateValueUI();
+//   });
+// };
+
+// CounterPlugin.prototype.updateValueUI = function () {
+//   this._refs.value.textContent = this._value;
+// };
+
+// CounterPlugin.prototype.increment = function () {
+//   this._value += this._step;
+// };
+
+// CounterPlugin.prototype.decrement = function () {
+//   this._value -= this._step;
+// };
+
+// const counter1 = new CounterPlugin({
+//   rootSelector: "#counter-1",
+//   step: 2,
+// });
+
+// const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 10 });
+
+// console.log(counter1);
+// console.log(counter2);
+
 // 29.01.2023 ------------------------
 // ------------------ условие ЗАДАЧА 7 ----------------------------
 // //7. Напиши скрипт управления личным кабинетом интернет банка
