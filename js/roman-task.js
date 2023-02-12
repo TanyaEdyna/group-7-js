@@ -1,3 +1,404 @@
+// 12.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 21 ----------------------------
+// Напиши клас Client який створює об'єкт із властивостями login і email.
+// Оголоси приватні властивості #login і #email,
+// доступ до яких зроби через геттер та сеттер login і email.
+
+// ------------------ решение ЗАДАЧА 21 ----------------------------
+// class Client {
+//   #login;
+//   #email;
+
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const pirat = new Client({
+//   login: "Jone",
+//   email: "buhta@island.com",
+// });
+
+// console.log(pirat);
+// console.log(pirat.email);
+// console.log(pirat.login);
+
+// pirat.email = "ship@buhta.bay";
+// pirat.login = "Black Beard";
+
+// console.log(pirat.email);
+// console.log(pirat.login);
+
+// ------------------ условие ЗАДАЧА 20 ----------------------------
+// Напиши клас Storage який створює об'єкти керувати складом товарів.
+// При виклику отримуватиме один аргумент - початковий масив товарів,
+// і записуватиме його у властивість items.
+// Добавте методи класу:
+
+// getItems() - повертає масив товарів.
+// addItem(item) - отримує новий товар та додає його до поточних.
+// removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// items.addItem("Манго");
+// items.removeItem("Ківі")
+
+// ------------------ решение ЗАДАЧА 20 ----------------------------
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     this.items.splice(this.items.indexOf(item), 1);
+//   }
+// }
+
+// const productGroupe = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// console.table(productGroupe.getItems());
+// productGroupe.addItem("Манго");
+// productGroupe.removeItem("Ківі");
+
+// ------------------ условие ЗАДАЧА 19 ----------------------------
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+// ------------------ решение ЗАДАЧА 19 ----------------------------
+// class User {
+//   constructor({ username, age, numberOfPosts }) {
+//     this.username = username;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//   }
+
+//   getInfo() {
+//     return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
+// }
+
+// const bigBoy = new User({
+//   username: "Bobby",
+//   age: "58",
+//   numberOfPosts: 34,
+// });
+
+// console.table(bigBoy);
+// console.log(bigBoy.getInfo());
+
+// ------------------ условие ЗАДАЧА 18 ----------------------------
+// 1) Напишіть ф - ю конструктор яка створює обєкт person з такимим ключами:
+// const Person = {
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest,
+//   bio() {
+//     // виводить рядок Привіт {імя} мені {вік} років. Мені подобається {інтерес}
+//   },
+//   greeting() {
+//     // Привіт, я {імя}
+//   },
+// };
+// const user = new Person(
+//     "Den",
+//    "Dounot",
+//     40,
+//     "male",
+//    "React",
+//   );
+
+// ------------------ решение ЗАДАЧА 18 ----------------------------
+// class Pearson {
+//   constructor({ firstName, lastName, age, gender, interest }) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.gender = gender;
+//     this.interest = interest;
+//   }
+
+//   bio() {
+//     console.log(
+//       `Привіт ${this.firstName} мені ${this.age} років. Мені подобається ${this.interest}`
+//     );
+//   }
+
+//   greeting() {
+//     console.log(`Привіт, я ${this.firstName}`);
+//   }
+// }
+
+// const userSergio = new Pearson({
+//   firstName: "Den",
+//   lastName: "Dounot",
+//   age: 40,
+//   gender: "male",
+//   interest: "React",
+// });
+
+// console.table(userSergio);
+// userSergio.bio();
+// userSergio.greeting();
+
+// ------------------ условие ЗАДАЧА 17 ----------------------------
+// Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
+// Використовуючи Array.prototype.filter виконати фільтрацію,
+// залишивши в uniqueTopics тільки унікальні елементи.
+
+// ------------------ решение ЗАДАЧА 17 ----------------------------
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Functions",
+//       "Conditions",
+//       "Classes",
+//       "DOM",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Promises",
+//       "AJAX",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+// ];
+// const allTopics = courses.flatMap((el) => el.topics);
+// const uniqueTopics = allTopics.filter((el, i, arr) => i === arr.indexOf(el));
+// console.log(allTopics);
+// console.log(uniqueTopics);
+
+// ------------------ условие ЗАДАЧА 16 ----------------------------
+// Виконати сортування масиву назв моніторів в алфавітному
+// та зворотному алфавітному порядку.
+
+// ------------------ решение ЗАДАЧА 16 ----------------------------
+// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+// const itemsUp = [...items].sort((a, b) => a.localeCompare(b));
+// const itemsDown = [...items].sort((a, b) => (a > b ? -1 : 1));
+// console.table(itemsUp);
+// console.table(itemsDown);
+
+// ------------------ условие ЗАДАЧА 15 ----------------------------
+// Сортування примітивів.
+// Виконати сортування масиву цін зі спадання та зростання.
+
+// ------------------ решение ЗАДАЧА 15 ----------------------------
+// const prices = [2, 14, 1, 37, 26, 8];
+// const pricesUp = [...prices].sort((a, b) => a - b);
+// const pricesDown = [...prices].sort((a, b) => b - a);
+// console.table(pricesUp);
+// console.table(pricesDown);
+
+// ------------------ условие ЗАДАЧА 14 ----------------------------
+// МАЄМО МАСИВ, ПОТРІБНО:
+// 1)получити масив вчених які народились у 19ст;
+// 2)порахувати загальну суму років скільки прожили вчені , і визначити середнє значення;
+// 3) відсортувати по алфавіту;
+// 4)відсортувати по кількості прожитих років;
+// 5)відфільтрувати, хто народився в 15,16,17ст;
+// 6)знайти рік народження Albert Einstein;
+// 7)визначити, чи усі вчені працювали у 19ст;
+
+// ------------------ решение ЗАДАЧА 14 ----------------------------
+// const scientists = [
+//   {
+//     name: "Albert",
+//     surname: "Einstein",
+//     born: 1879,
+//     dead: 1955,
+//     id: 1,
+//   },
+//   {
+//     name: "Isaac",
+//     surname: "Newton",
+//     born: 1643,
+//     dead: 1727,
+//     id: 2,
+//   },
+//   {
+//     name: "Galileo",
+//     surname: "Galilei",
+//     born: 1564,
+//     dead: 1642,
+//     id: 3,
+//   },
+//   {
+//     name: "Marie",
+//     surname: "Curie",
+//     born: 1867,
+//     dead: 1934,
+//     id: 4,
+//   },
+//   {
+//     name: "Johannes",
+//     surname: "Kepler",
+//     born: 1571,
+//     dead: 1630,
+//     id: 5,
+//   },
+//   {
+//     name: "Nicolaus",
+//     surname: "Copernicus",
+//     born: 1473,
+//     dead: 1543,
+//     id: 6,
+//   },
+//   {
+//     name: "Max",
+//     surname: "Planck",
+//     born: 1858,
+//     dead: 1947,
+//     id: 7,
+//   },
+//   {
+//     name: "Katherine",
+//     surname: "Blodgett",
+//     born: 1898,
+//     dead: 1979,
+//     id: 8,
+//   },
+//   {
+//     name: "Ada",
+//     surname: "Lovelace",
+//     born: 1815,
+//     dead: 1852,
+//     id: 9,
+//   },
+// ];
+// // 1)
+// const scientistsName = scientists.filter(
+//   (el) => el.born >= 1801 && el.born <= 1900
+// );
+// console.log(scientistsName);
+// // 2)
+// const scientistsAges = scientists.reduce((acc, el) => {
+//   return acc + el.dead - el.born;
+// }, 0);
+// console.log(scientistsAges / scientists.length);
+// // 3)
+// const scientistsNameSort1 = [...scientists].sort((a, b) =>
+//   a.name.localeCompare(b)
+// );
+// const scientistsNameSort2 = [...scientists].sort((a, b) =>
+//   a.name < b.name ? 1 : -1
+// );
+// console.table(scientistsNameSort1);
+// console.table(scientistsNameSort2);
+// // 4)
+// const scientistsAgesSort = [...scientists].sort(
+//   (a, b) => a.dead - a.born - (b.dead - b.born)
+// );
+// console.table(scientistsAgesSort);
+// // 5)
+// const scientistsBornCentury = scientists.filter(
+//   (el) => el.born >= 1501 && el.born <= 1800
+// );
+// console.table(scientistsBornCentury);
+// // 6)
+// const scientistsFindBornYear = (scientistName, scientistSurname) => {
+//   const scientistAgeBirth = scientists.find(
+//     (el) => el.name === scientistName && el.surname === scientistSurname
+//   );
+//   console.log(
+//     `${scientistName} ${scientistSurname} was born in ${scientistAgeBirth.born}`
+//   );
+// };
+// scientistsFindBornYear("Albert", "Einstein");
+// // 7)
+// const scientistsAges = scientists.every((el) => el.dead >= 1900);
+// console.log(scientistsAges);
+
+// ------------------ условие ЗАДАЧА 13 ----------------------------
+// Напишіть дві функції:
+// makeProduct(name, price, callback) - приймає імя та ціну товару, а також колбек.
+// Функція створює обєкт товару, добавляє йому унікальний ідентифікатор,
+// в значення id і викликає колбек, передаючи йому створений обєкт.
+// showProduct(product) - колбек приймає обєкт продукта і логінує його в консоль;
+// makeProduct("Холодильник", 10000, logger);
+// ------------------ решение ЗАДАЧА 13 --------------------------------
+// const makeProduct = (name, price, callback) => {
+//   const product = {
+//     id: Date.now(),
+//     name,
+//     price,
+//   };
+
+//   callback(product);
+// };
+
+// const showProduct = (product) => {
+//   console.log(product);
+// };
+
+// makeProduct("Холодильник", 10000, showProduct);
+
+// ------------------ условие ЗАДАЧА 12 ----------------------------
+// Напишіть дві функції:
+// letMeSeeYourName(callback) - запитує імя користувача, через prompt і викликає
+// колбек функцію(callback)
+// greet(name) - колбек , який приймає імя і логінує в консоль рядок  "Привіт" + імя
+
+// ------------------ решение ЗАДАЧА 12 --------------------------------
+// const letMeSeeYourName = (callback) => {
+//   const userName = prompt("What is your name?");
+//   callback(userName);
+// };
+
+// const greet = (userName) => {
+//   console.log(`User name is: ${userName}`);
+// };
+
+// letMeSeeYourName(greet);
+
 // 11.02.2023 ------------------------
 // ------------------ условие ЗАДАЧА 11 (codewars - 7 kyu) ----------------------------
 // Write an algorithm that takes an array and moves all of the zeros to the end,
