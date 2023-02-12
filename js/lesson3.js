@@ -189,5 +189,119 @@
 // console.log(workAtNineTnth);
 
 
+//ЗАДАЧА 4
+//Сортування примітивів.
+//Виконати сортування масиву цін зі спадання та зростання.
+//const prices = [2, 14, 1, 37, 26, 8];
+
+//const priceUp = [...prices].sort((a, b) => a - b);
+
+//const priceDown = [...prices].sort((a, b) => b - a);
+//console.log(priceUp);
+//console.log(priceDown);
+
+//ЗАДАЧА 5
+//Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
+// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+
+// const itemsUp = [...items].sort((a, b) => a > b ? 1 : -1);
+// const itemsDown = [...items].sort((a, b) => a > b ? -1 : 1);
+// console.log(itemsUp);
+// console.log(itemsDown);
+// ЗАДАЧА 6
+// Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
+// Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Functions",
+//       "Conditions",
+//       "Classes",
+//       "DOM",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Promises",
+//       "AJAX",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+// ];
+
+//---------------------------- 5 Модуль ----------------------------------
+// ЗАДАЧА 7
+// 1) Напишіть ф - ю конструктор яка створює обєкт person з такимим ключами:
+// const Person = {
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest,
+//   bio() {
+//     // виводить рядок Привіт {імя} мені {вік} років. Мені подобається {інтерес}
+//   },
+//   greeting() {
+//     // Привіт, я {імя}
+//   },
+// };
+// const user = new Person(
+//     "Den",
+//    "Dounot",
+//     40,
+//     "male",
+//    "React",
+// );
+  
+
+// ЗАДАЧА 8
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+    
+    
+// ЗАДАЧА 9
+// Напиши клас Storage який створює об'єкти керувати складом товарів.
+// При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
+// Добавте методи класу:
+
+// getItems() - повертає масив товарів.
+// addItem(item) - отримує новий товар та додає його до поточних.
+// removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// items.addItem("Манго");
+// items.removeItem("Ківі")
+
+
+// ЗАДАЧА 4
+// Напиши клас Client який створює об'єкт із властивостями login і email.
+// Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
+
 
 
