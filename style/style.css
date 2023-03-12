@@ -152,3 +152,12 @@ body {
 }
 
 /* end scroll */
+
+p {
+  line-height: 20px;
+}
+.container {
+  height: 1800px;
+  width: 500px;
+  margin: 100px auto;
+}
