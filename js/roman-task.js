@@ -1,3 +1,95 @@
+// 01.03.2023 ------------------------
+
+// 26.02.2023 ------------------------
+// ------------------ условие ЗАДАЧА 22 ----------------------------
+// ПОТРІБНО СТВОРИТИ Ф - ЦІЮ, ЯКА БУДЕ ШУКАТИ НАРЦИСА.
+// ГОЛОВНА УМОВА НАРЦИСА ЗНАЮТЬ УСІ, НАРЦИС НЕ ЗНАЄ НІКОГО
+// є елемент масиву , який незнає нікого
+// якщо не одна така людина , то вертаємо not found
+// якщо один , то перевірити , чи його знають усі люди,
+// якщо так то вертаємо found
+
+// ------------------ решение ЗАДАЧА 22 ----------------------------
+// const people1 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: [],
+//   },
+// ];
+
+// const people2 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: ["Eva"],
+//   },
+//   {
+//     name: "Eva",
+//     know: [],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+// ];
+
+// const people3 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: [],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+// ];
+
+// console.log(findNarcissus(people1));
+// console.log(findNarcissus(people2));
+// console.log(findNarcissus(people3));
+
+// function findNarcissus(arr) {
+//   const findEgoistas = arr.filter((el) => el.know.length === 0);
+
+//   if (findEgoistas.length > 1) {
+//     return "not found";
+//   }
+
+//   const nameEgo = arr.find((el) => el.know.length === 0).name;
+//   const men = arr
+//     .filter((el) => el.know.length !== 0)
+//     .every((el) => el.know.some((el) => el === nameEgo));
+
+//   if (men) {
+//     return `found. His name ${nameEgo}`;
+//   }
+
+//   return "not found";
+// }
+
 // 12.02.2023 ------------------------
 
 // ------------------ условие ЗАДАЧА 21 ----------------------------
