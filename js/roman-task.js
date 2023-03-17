@@ -1,4 +1,45 @@
-// 01.03.2023 ------------------------
+// 17.03.2023 ------------------------
+// ------------------ условие ЗАДАЧА 23 ----------------------------
+// A format for expressing an ordered list of integers is to use a comma separated list of either:
+// - individual integers
+// - or a range of integers denoted by the starting integer separated from the end integer in the range by a dash, '-'. The range includes all integers in the interval including both endpoints. It is not considered a range unless it spans at least 3 numbers. For example "12,13,15-17"
+// Complete the solution so that it takes a list of integers in increasing order and returns a correctly formatted string in the range format.
+
+// solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20]);
+// returns "-10--8,-6,-3-1,3-5,7-11,14,15,17-20"
+
+// ------------------ решение ЗАДАЧА 23 ----------------------------
+// const solution = [
+//   -10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18,
+//   19, 20,
+// ];
+
+// function getStringRange(value) {
+//   const bigArr = [];
+
+//   for (let i = 0; i < value.length; ) {
+//     const arrRange = [];
+//     while (value[i] === value[i + 1] - 1) {
+//       arrRange.push(value[i]);
+//       i += 1;
+//     }
+
+//     arrRange.push(value[i]);
+//     i += 1;
+
+//     if (arrRange.length < 3) {
+//       bigArr.push(arrRange.join(","));
+//     }
+
+//     if (arrRange.length >= 3) {
+//       bigArr.push(`${arrRange[0]}-${arrRange[arrRange.length - 1]}`);
+//     }
+//   }
+
+//   return bigArr.join(",");
+// }
+
+// console.log(getStringRange(solution));
 
 // 26.02.2023 ------------------------
 // ------------------ условие ЗАДАЧА 22 ----------------------------
