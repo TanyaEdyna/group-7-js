@@ -22,11 +22,11 @@
 // <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
 function scrollerEl() {
-   console.log('scroll'); 
+   console.log(window.pageYOffset); 
 }
 
 function resizedEl() {
-    console.log('resize'); 
+   console.log(window.view); 
  };
  addEventListener('scroll', _.throttle(scrollerEl, 500));
  addEventListener('resize',_.throttle(resizedEl, 500));
