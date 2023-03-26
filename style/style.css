@@ -161,3 +161,6 @@ p {
   width: 500px;
   margin: 100px auto;
 }
+input {
+  width: 300px;
+}
