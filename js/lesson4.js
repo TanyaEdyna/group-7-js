@@ -38,48 +38,54 @@
 // 2.1НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН,
 // html/
 
-// const refs = {
-//     priceEl: document.querySelector("#price"),
-//     quanlityEl: document.querySelector("#quantity"),
-//     totalEl: document.querySelector(".total"),
-//     formEl: document.querySelector(".form"),
-//     amountEl: document.querySelector(".amount"),
-//     containerEl: document.querySelector(".container"),
-// }
-// //console.log(refs);
-// function calculator(e) {
-//     e.preventDefault();
-//     const price = refs.priceEl.value;
-//     const quanlity = refs.quanlityEl.value;
-//     const total = price * quanlity;
-//     refs.totalEl.textContent = total;
-//     refs.amountEl.textContent = quanlity;
-//     //return total;
-// };
+const refs = {
+    priceEl: document.querySelector("#price"),
+    quanlityEl: document.querySelector("#quantity"),
+    totalEl: document.querySelector(".total"),
+    formEl: document.querySelector(".form"),
+    amountEl: document.querySelector(".amount"),
+    containerEl: document.querySelector(".container"),
+}
+//console.log(refs);
+function calculator(e) {
+    e.preventDefault();
+    const price = refs.priceEl.value;
+    const quanlity = refs.quanlityEl.value;
+    const total = price * quanlity;
+    refs.totalEl.textContent = total;
+    refs.amountEl.textContent = quanlity;
+    //return total;
+};
 
-// window.addEventListener("DOMContentLoaded", calculator);
-// refs.formEl.addEventListener("submit", calculator);
+window.addEventListener("DOMContentLoaded", calculator);
+refs.formEl.addEventListener("submit", calculator);
 
+<<<<<<< Updated upstream
 //  //2.2 ПЕРЕПИШІТЬ КОД , ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ ,
 //  //ПРИ НАЖАТТІ ЯКОГО БУДЕ ВАМ РАХУВАТИ ТА ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН < button class="btn" > Calculate</ >
+=======
+ //2.2 ПЕРЕПИШІТЬ КОД , ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ , 
+ //ПРИ НАЖАТТІ ЯКОГО БУДЕ ВАМ РАХУВАТИ ТА ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН < button class="btn" > Calculate</ >  
+>>>>>>> Stashed changes
 
-// function change() {
-//     const price = refs.priceEl.value;
-//     const quanlity = refs.quanlityEl.value;
-//     refs.amountEl.textContent = quanlity;
-// }
-// refs.quanlityEl.addEventListener("input", change);
+function change() {
+    const price = refs.priceEl.value;
+    const quanlity = refs.quanlityEl.value;
+    refs.amountEl.textContent = quanlity;
+}
+refs.quanlityEl.addEventListener("input", change);
 
-// //2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА
-// // ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ
+//2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА
+// ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ
 
-// const randomRgbColor = () => {
-//   const r = Math.round(Math.random() * (255 - 1) + 1);
-//   const g = Math.round(Math.random() * (255 - 1) + 1);
-//   const b = Math.round(Math.random() * (255 - 1) + 1);
-//   return `rgb(${r},${g},${b})`;
-// };
+const randomRgbColor = () => {
+  const r = Math.round(Math.random() * (255 - 1) + 1);
+  const g = Math.round(Math.random() * (255 - 1) + 1);
+  const b = Math.round(Math.random() * (255 - 1) + 1);
+  return `rgb(${r},${g},${b})`;
+};
 
+<<<<<<< Updated upstream
 //refs.containerEl.style.backgroundColor = randomRgbColor();
 
 // ЗАДАЧА 3
@@ -215,3 +221,6 @@ console.log(findNarcissus(people1));
 console.log([...people1]);
 // console.log(findNarcissus(people2));
 // console.log(findNarcissus(people3));
+=======
+refs.containerEl.style.backgroundColor = randomRgbColor();
+>>>>>>> Stashed changes
