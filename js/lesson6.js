@@ -46,10 +46,10 @@ e.preventDefault();
 
 const coctailEl = input.value;
 console.log(coctailEl)
-fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${coctailEl}`)
 .then(res => res.json())
 .then(data => 
-  console.log(data.drinks)
+  coctailCards(data.drinks)
 )
 .catch(err => console.log(err))
   
