@@ -37,38 +37,88 @@
 
   
  
+// const form = document.querySelector('#form');
+// const input = document.querySelector('#input');
+// const coctail = document.querySelector('.coctail');
+
+// function inputCoctail (e) {
+// e.preventDefault();
+
+// const coctailEl = input.value;
+// console.log(coctailEl)
+// fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${coctailEl}`)
+// .then(res => res.json())
+// .then(data => 
+//   coctailCards(data.drinks)
+// )
+// .catch(err => console.log(err))
+  
+// }
+
+// form.addEventListener('submit', inputCoctail);
+
+// function coctailCerd ({strDrink, strDrinkThumb}) {
+//   const card = `
+//   <div>
+//     <h2>Назва:${strDrink}</h2>
+//     <img src="${strDrinkThumb}" alt="${strDrink}">
+//   </div>
+//   `
+// coctail.insertAdjacentHTML("beforeend", card)
+// }
+
+// function coctailCards (array) {
+//   array.forEach(element => 
+//     coctailCerd(element) 
+//   ); 
+// }
+// ЗАДАЧА 3
+// НАПИШІТЬ ПАГІНАЦІЮ, ДЛЯ ПЕРЕХОДУ ПО СТОРІНКАХ
+//https://docs.github.com/en/rest/search?apiVersion=2022-11-28#search-user
+
+//fetch(`https://api.github.com/search/users?q=${}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c`)
+
+
 const form = document.querySelector('#form');
 const input = document.querySelector('#input');
-const coctail = document.querySelector('.coctail');
+const name = document.querySelector('.name');
+const btn = document.querySelector('.btn');
 
-function inputCoctail (e) {
-e.preventDefault();
+btn.addEventListener('click', nameInput);
 
-const coctailEl = input.value;
-console.log(coctailEl)
-fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${coctailEl}`)
-.then(res => res.json())
-.then(data => 
-  coctailCards(data.drinks)
-)
-.catch(err => console.log(err))
-  
+let pageCount = 1;
+
+
+
+function nameInput(e) {
+  e.preventDefault();
+
+  const nameInput = input.value;
+  fetch(`https://api.github.com/search/users?q=${nameInput}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c&page=${pageCount}`)
+    .then((res) => res.json())
+    .then((data) => userInfo(data.items))
+    .then(() => pageCount++)
+    .catch((err) => console.log(err))
 }
 
-form.addEventListener('submit', inputCoctail);
+form.addEventListener('submit', nameInput);
 
-function coctailCerd ({strDrink, strDrinkThumb}) {
-  const card = `
+function getUser({ avatar_url, login }) {
+  const user = `
   <div>
-    <h2>Назва:${strDrink}</h2>
-    <img src="${strDrinkThumb}" alt="${strDrink}">
+  <img src="${avatar_url}" alt="${login}">
+  <h3>${login}</h3>
   </div>
   `
-coctail.insertAdjacentHTML("beforeend", card)
+  name.insertAdjacentHTML("beforeend", user);
 }
 
-function coctailCards (array) {
-  array.forEach(element => 
-    coctailCerd(element) 
-  ); 
+function userInfo (array) {
+   array.forEach(element => 
+     getUser(element) 
+   ); 
 }
+ 
+
+//avatar_url
+//login
